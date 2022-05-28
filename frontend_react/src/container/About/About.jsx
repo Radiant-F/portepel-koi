@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { images } from "../../constants";
+import { urlFor, client } from "../../client";
+import AppWrap from "../../wrapper/AppWrap";
 
 import "./About.scss";
 
-const abouts = [
+const aboutsLocal = [
   {
     title: "Mobile Development",
     description: "Scalability as it finest.",
@@ -28,7 +30,17 @@ const abouts = [
   },
 ];
 
-export default function About() {
+function About() {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+    client
+      .fetch(query)
+      .then((data) => setAbouts(data))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <>
       <h2 className="head-text">
@@ -46,7 +58,7 @@ export default function About() {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={about.imgUrl} alt={about.title} />
+            <img src={urlFor(about.imgUrl)} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
@@ -59,3 +71,5 @@ export default function About() {
     </>
   );
 }
+
+export default AppWrap(About, "about");
