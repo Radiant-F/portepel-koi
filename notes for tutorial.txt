@@ -1,3 +1,4 @@
 1:07:28 | if you're on Windows, you can press Win + . (dot) to brings up built in emoji picker.
 1:40:51 | he swore lol..
 2:13:34 | you can do ${activeFilter === item && 'item-active'} instead of tenary.
+2:31:59 | rgba only accept 4 properties, like rgba(0, 0, 0, 0.2);. It shows error if I put 5 props but idk why the video doesn't show any error. See also 2:33:52.
