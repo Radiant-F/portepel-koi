@@ -2,3 +2,5 @@
 1:40:51 | he swore lol..
 2:13:34 | you can do ${activeFilter === item && 'item-active'} instead of tenary.
 2:31:59 | rgba only accept 4 properties, like rgba(0, 0, 0, 0.2);. It shows error if I put 5 props but idk why the video doesn't show any error. See also 2:33:52.
+3:28:55 | I got error because the image source is undefined.. unlike the others, when I console.log(testimonials[currentIndex].imgurl), the value of source is undefined. I don't know what to do, so I just show testimonials[currentIndex].feedback only.
+3:37:34 | another swore xd (srry i had to)
