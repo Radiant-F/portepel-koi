@@ -33,7 +33,7 @@ function Testimonial() {
           <div className="app__testimonial-item app__flex">
             <img
               src={
-                "https://images.unsplash.com/photo-1653325078470-043f008639c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                "https://images.unsplash.com/photo-1653933445220-bdf46e0d5bdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
               }
               alt="testimonial"
             />
