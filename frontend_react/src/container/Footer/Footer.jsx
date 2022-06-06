@@ -48,13 +48,13 @@ function Footer() {
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
           <a href="mailto:radiantfadilah0@gmail.com" className="p-text">
-            radiant@gmail.com
+            radiantfadilah0@gmail.com
           </a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="email" />
           <a href="tel: +62 (851) 5743-9660" className="p-text">
-            +62 (851) xxxx-xxxx
+            +62 (851) 5743-9660
           </a>
         </div>
       </div>
@@ -85,11 +85,20 @@ function Footer() {
               className="p-text"
               placeholder="Your Message"
               value={message}
-              name={message}
+              name="message"
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>
+          <button
+            type="button"
+            className="p-text"
+            onClick={handleSubmit}
+            disabled={
+              formData.message == "" ||
+              formData.name == "" ||
+              formData.email == ""
+            }
+          >
             {loading ? "Sending" : "Send Message"}
           </button>
         </div>
