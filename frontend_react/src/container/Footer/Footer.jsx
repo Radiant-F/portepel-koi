@@ -94,9 +94,9 @@ function Footer() {
             className="p-text"
             onClick={handleSubmit}
             disabled={
-              formData.message == "" ||
-              formData.name == "" ||
-              formData.email == ""
+              formData.message === "" ||
+              formData.name === "" ||
+              formData.email === ""
             }
           >
             {loading ? "Sending" : "Send Message"}
